@@ -73,7 +73,7 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-		Ball bouncyball;
-		Ball bouncyball2;
+		Ball bouncyballs[100];
+
 
 };

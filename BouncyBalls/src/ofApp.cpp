@@ -3,16 +3,21 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-	bouncyball.setup(100,50);
-	bouncyball2.setup(200,300);
+	for (int i = 0; i < 100; i++)
+	{
+		bouncyballs[i].setup(ofRandom(0, ofGetWidth()), ofRandom(0, ofGetHeight()));
+	}
+
 	
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 
-	bouncyball.update();
-	bouncyball2.update();
+	for (int i = 0; i < 100; i++)
+	{
+		bouncyballs[i].update();
+	}
 
 }
 
@@ -21,8 +26,10 @@ void ofApp::draw(){
 
 	ofBackground(25);
 
-	bouncyball.draw();
-	bouncyball2.draw();
+	for (int i = 0; i < 100; i++)
+	{
+		bouncyballs[i].draw();
+	}
 
 }
 
