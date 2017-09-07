@@ -5,21 +5,26 @@ void ofApp::setup(){
 
 	x = ofGetWidth() / 2;
 	y = ofGetHeight() / 2;
+	velocityx = 1;
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 
+	x = x + velocityx;
+	if (x > ofGetWidth())
+	{
+		velocityx = velocityx * -1;
+	}
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-
-
 	ofBackground(25);
 
 	//ofDrawCircle(ofGetWidth() / 2, ofGetHeight() / 2, 10);
+
 	ofDrawCircle(x, y, 10);
 
 }
