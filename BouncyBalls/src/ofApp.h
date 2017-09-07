@@ -6,6 +6,7 @@ class Ball{
 public:
 	float x;
 	float y;
+	float radius;
 	float velocityx;
 	float velocityy;
 	float speed;
@@ -14,6 +15,7 @@ public:
 		speed = 1;
 		x = ofGetWidth() / 2;
 		y = ofGetHeight() / 2;
+		radius = 10;
 		velocityx = speed;
 		velocityy = speed;
 	}
@@ -47,7 +49,7 @@ public:
 
 	void draw(){
 		
-		ofDrawCircle(x, y, 10);
+		ofDrawCircle(x, y, radius);
 
 	}
 };
