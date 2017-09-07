@@ -11,10 +11,10 @@ public:
 	float velocityy;
 	float speed;
 
-	void setup(){
+	void setup(float xIn, float yIn){
 		speed = 1;
-		x = ofGetWidth() / 2;
-		y = ofGetHeight() / 2;
+		x = xIn;
+		y = yIn;
 		radius = 10;
 		velocityx = speed;
 		velocityy = speed;
@@ -74,5 +74,6 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
 		Ball bouncyball;
+		Ball bouncyball2;
 
 };

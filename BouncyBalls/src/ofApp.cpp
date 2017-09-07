@@ -3,7 +3,8 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-	bouncyball.setup();
+	bouncyball.setup(100,50);
+	bouncyball2.setup(200,300);
 	
 }
 
@@ -11,6 +12,7 @@ void ofApp::setup(){
 void ofApp::update(){
 
 	bouncyball.update();
+	bouncyball2.update();
 
 }
 
@@ -18,7 +20,9 @@ void ofApp::update(){
 void ofApp::draw(){
 
 	ofBackground(25);
+
 	bouncyball.draw();
+	bouncyball2.draw();
 
 }
 
