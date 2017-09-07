@@ -3,19 +3,39 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+	speed = 1;
 	x = ofGetWidth() / 2;
 	y = ofGetHeight() / 2;
-	velocityx = 1;
+	velocityx = speed;
+	velocityy = speed;
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 
 	x = x + velocityx;
+	y =	y + velocityy;
+
 	if (x > ofGetWidth())
 	{
-		velocityx = velocityx * -1;
+		velocityx = -speed;
 	}
+
+	if (x < 0)
+	{
+		velocityx = speed;
+	}
+
+	if (y > ofGetHeight())
+	{
+		velocityy = -speed;
+	}
+
+	if (y < 0)
+	{
+		velocityy = speed;
+	}
+
 }
 
 //--------------------------------------------------------------

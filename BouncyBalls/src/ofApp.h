@@ -24,6 +24,8 @@ class ofApp : public ofBaseApp{
 		float x;	
 		float y;
 		float velocityx;
+		float velocityy;
+		float speed;
 
 
 };
