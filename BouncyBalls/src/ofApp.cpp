@@ -3,38 +3,14 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-	speed = 1;
-	x = ofGetWidth() / 2;
-	y = ofGetHeight() / 2;
-	velocityx = speed;
-	velocityy = speed;
+	bouncyball.setup();
+	
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 
-	x = x + velocityx;
-	y =	y + velocityy;
-
-	if (x > ofGetWidth())
-	{
-		velocityx = -speed;
-	}
-
-	if (x < 0)
-	{
-		velocityx = speed;
-	}
-
-	if (y > ofGetHeight())
-	{
-		velocityy = -speed;
-	}
-
-	if (y < 0)
-	{
-		velocityy = speed;
-	}
+	bouncyball.update();
 
 }
 
@@ -42,10 +18,7 @@ void ofApp::update(){
 void ofApp::draw(){
 
 	ofBackground(25);
-
-	//ofDrawCircle(ofGetWidth() / 2, ofGetHeight() / 2, 10);
-
-	ofDrawCircle(x, y, 10);
+	bouncyball.draw();
 
 }
 
